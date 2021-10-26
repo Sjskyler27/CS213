@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel= "stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merchendise</title>
+<style>
+   body { 
+        background-color: rgba(122, 122, 122, 0.801);
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+    #product{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
+        
+    }
+    #product img{
+        width: 20vw;
+        height: 20vw;
+        margin: auto;
+        border: 2px solid black ;
+    }
+    #product p{
+        color: rgb(165, 25, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.1vw;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    .document{
+        background-color: rgb(182, 182, 182);
+        position: absolute;
+        margin-top: 10px;
+        right: 4%;
+        width: 90%; 
+        border: 3px solid rgb(0, 0, 0);
+        font-size: 1.6vw;
+        padding: 10px;
+    }
+</style> 
+</head>
+<body id="top">
+    <div id="title">
+        <h1>WELCOME TO THE D&D SHOP</h1>
+        <p>We hope you find something that peeks your interest!</p>
+    </div><!--title-->
+    <div class="parent">
+        <div class="document">
+            <p>Everything in our list is up to date and can be purchased when you arive.</p>
+            <a href="#Bottom">Go to Bottom</a><br>
+                <div id="product">
+                    <img src="knight.webp" alt="a picture of knight">
+                    <img src="cards.webp" alt="a picture of cards">
+                    <img src="dice.webp" alt="a picture of dice">
+                    <p>10$</p>
+                    <p>25$</p>
+                    <p>6$</p>
+                    <img src="dicetower.webp" alt="a picture of dicetower">
+                    <img src="dragon.webp" alt="a picture of dragon">
+                    <img src="map.webp" alt="a picture of map">
+                    <p>9$</p>
+                    <p>12$</p>
+                    <p>18$</p>
+                    <img src="adventure.jfif" alt="a picture of dicetower">
+                    <img src="sticker.jfif" alt="a picture of dragon">
+                    <img src="starter.jfif" alt="a picture of map">
+                    <p>22$</p>
+                    <p>3$</p>
+                    <p>35$</p>
+                    <br>
+                </div><!--products-->
+                <a  id="Bottom" href="#top">Go to Top</a><br>
+            <a class= "button" href="./assign04.html"> Homepage!</a>
+        </div><!--document-->
+    </div><!--parent-->
+    
+
+
+</body>
+</html>

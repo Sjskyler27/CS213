@@ -1,0 +1,144 @@
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #2196F3;
+    height: 150px;
+    background-color: 2196F3;
+    margin-bottom: 10px;
+}
+h1{
+    text-align: center;
+    color: black;
+    font-size: 75px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: auto;
+    padding-right: auto;
+}
+.icon{
+    position: absolute;
+    margin-top: 15PX ;
+    margin-left: 25PX;
+    width: 125px;
+    height: 125px;
+}
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+  
+
+  
+.menu {
+    grid-column: 1;
+    grid-row: 2/ span 2;
+}
+.textbox{
+    padding: 10px;
+}
+
+.link{
+    overflow: hidden;
+    font-size: 25px;
+    font-style: italic;
+    font-weight:bold;
+    margin-bottom: 20px;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.button{
+    margin-bottom: 10px;
+    width: 196px;
+}
+.button:link, .button:visited {
+    background-color: black;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.button:hover, .button:active {
+    background-color: white;
+    color: black;
+}
+.main {
+    row-gap: 10px;
+    grid-column: 2 / span 4;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.footer {
+    grid-column: 2 / span 4;
+    grid-row: 3;
+    font-size: 14px;
+}
+img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .icon{
+        width: 75px;
+        height: 85px;
+        padding-left: 0px;
+        padding-top: 5px;
+    }
+    .menu{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .main {
+        row-gap: 10px;
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 14px;
+    }
+    .footer {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+    h1{
+        font-size: 60px;
+        padding-top: 30px;
+    }
+    .button{
+        margin-bottom: 10px;
+        width: 50px;
+    }
+}

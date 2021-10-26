@@ -1,0 +1,33 @@
+
+        h1, h3 {
+            text-align: center;
+            margin: 0 auto;
+   }
+   body {
+       width: 50%;
+       margin-left: 25%;
+       margin-right: 25%;
+       background-color: rgb(55, 122, 24);
+   }
+   #menuBar {
+       background-color: darkslateblue;
+   }
+   .menuBarItem {
+       color:rgb(255, 255, 255)
+   }
+   #title {
+       background-color: crimson;
+       color:rgb(202, 216, 0)
+   }
+   #text {
+       border-style: dashed;
+       border-color: teal;
+       background-color: rgba(248, 0, 0, 0.281);
+   }
+   #sidebar, #sidebar p, #sidebar h1 {
+        background-color: blue;
+        color:rgb(255, 136, 225);
+   }
+   #bottom {
+       color: gold;
+   }

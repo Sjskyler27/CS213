@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style> /* #0 */
+	   
+    /*Semi-dark themed page by JEFFREY BAHIAN 
+    CS213 WEEK03
+    I Jeffery went for a semi-dark background.
+    The menubar is in the middle. 
+    The Grading part is in the sidebar.
+    The */
+
+    /*I set the body with a dark background color, light text color, center alignment, and a monospace font-family*/
+    body { font-size:36px; 
+      background-color: rgba(1, 18, 24, 0.801);
+      color:rgb(243, 237, 214);
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+    }
+
+    /* Sets the style of the title in the page
+      inherits the center alignment and text color*/
+    #title {
+      background-color: #045c3a; /*sets the background color of the title into something dark*/
+      padding: 20px;
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 30px;
+    }
+
+    /*sets the style for the menubarlist
+      i want to keep in the middle, centered*/
+    #menuBarList {
+      overflow: hidden;
+      background-color: #333;
+      font-size: 25px;
+      font-style: italic;
+      font-weight:bold;
+    }
+    /*Sets how the style changes when you hover the mouse over it.*/
+    #menuBarList li:hover {
+      background-color: #ddd; /* background color changes into light color*/
+      color: black; /*text color changes into black*/
+    }
+
+    /*Sets the style when you click on the list item*/
+    #menuBarList li:active { 
+      color: #ddd; /*sets the color of the text into somethine light*/
+      background-color: black; /*sets the color of the background into black*/
+    }
+    
+    /*Sets the style of the buttons in the id="text"
+      the style of the button doesn't change after it is visited*/
+    #text a:link, a:visited {
+      background-color:rgb(226, 45, 32) ;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    /*Sets the style when it is clicked
+      */
+    #text a:hover, a:active {
+      background-color: white;
+      color: rgb(226, 45, 32) 
+    }
+    
+    /*Sets the div class="document" style beside the sidebar. */
+    .document {
+      float: right;
+      margin: 2%;
+      width: 70%; /*gives way for the sidebar, thus its only 70%*/
+      border: 3px solid green;
+    }
+    /*Sets the style for the sidebar. I could have put the menubar here, but chose the grading info instead.  */
+  #sidebar {
+      height: 100%;
+      width: 25%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 16px;
+      font-size: 20px;
+    }
+
+      /*the bottom is the footer of the page. */
+  #bottom {
+      background-color: #da549d;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+    }
+    /*Sets the font size for h1 in the id="text"*/
+ #text h1 {
+      font-size: 46px;
+    }
+
+    /*Sets the font size for p in the id="text"*/
+ #text p {
+      font-size: 25px;
+    }  
+
+	</style>
+    <style> /* #1 Samuel */
+	   
+     h1, h3 {
+                text-align: center;
+                margin: 0 auto;
+       }
+       body {
+           width: 50%;
+           margin-left: 25%;
+           margin-right: 25%;
+           background-color: rgb(55, 122, 24);
+       }
+       #menuBar {
+           background-color: darkslateblue;
+       }
+       .menuBarItem {
+           color:rgb(255, 255, 255)
+       }
+       #title {
+           background-color: crimson;
+           color:rgb(202, 216, 0)
+       }
+       #text {
+           border-style: dashed;
+           border-color: teal;
+           background-color: rgba(248, 0, 0, 0.281);
+       }
+       #sidebar, #sidebar p, #sidebar h1 {
+            background-color: blue;
+            color:rgb(255, 136, 225);
+       }
+       #bottom {
+           color: gold;
+       }
+	</style>
+    <style> /* #2 skyler*/
+	    body { font-size:36px; 
+      background-color: rgba(3, 93, 126, 0.801);
+      color:rgb(243, 237, 214);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #title {
+      background-color: #ddd; 
+      padding: 20px;
+      font-size: 25px;
+      color: black;
+    }
+
+    #menuBarList {
+      text-align: left;
+      font-size: 25px;
+      color: black;
+      font-family: cursive;
+    }
+    #menuBarItem {
+      padding: 5px;
+    }
+
+    #menuBarList li:hover {
+      background-color: #ddd; 
+    }
+    
+
+    #text a:link, a:visited {
+      color: hotpink;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    #text a:hover, a:active {
+      color: rgb(226, 45, 32) 
+    }
+    
+    .document {
+      float: center;
+      padding: 1%;
+      margin: 3%;
+      width: 90%;
+      border: 3px solid rgb(0, 0, 0);
+    }
+  #sidebar {
+    
+      background-color: #ddd;
+      font-size: 20px;
+      padding: 40px;
+      border: black;
+      color: black;
+      margin: 20px;
+    }
+  #bottom {
+      background-color: #ddd;;
+      padding: 10px;
+      text-align: center;
+      font-size: 10px;
+      color: black;
+    }
+ #text h1 {
+      font-size: 40px;
+      
+    }
+
+ #text p {
+      font-size: 25px;
+    }  
+	</style>
+    <style> /* #3 */
+	   /*nostyle*/
+	</style>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Week 03 : CSS</title>
+   </head>
+   <body onload="disableStyles()">
+      <div class="document">
+        <div id="title">
+          <h1>Week 03 : CSS</h1>
+          <p>This page will demonstrate how to switch between different CSS stylesheets to achieve a given effect</p>
+        </div> <!--title -->
+        <div class="content">
+          <div id="menuBar">
+            <ul id="menuBarList">
+              <li class="menuBarItem" onclick="applyStyle(0)">Stylesheet 1</li>
+              <li class="menuBarItem" onclick="applyStyle(1)">Stylesheet 2</li>
+              <li class="menuBarItem" onclick="applyStyle(2)">Stylesheet 3</li>
+              <li class="menuBarItem" onclick="disableStyles()">No Stylesheet</li>
+            </ul>
+          </div> <!-- menuBar -->
+          <div id="text">
+            <h1>Select the Stylesheet</h1>
+            <p>There are four stylesheets that you may select from. Each one will change the coloring, fonts, 
+            		and even the layout of the page.You can change the layout of this page by selecting different 
+                    stylesheets in the menu, or by selecting one of the following links:<br>
+              <a href="#" onclick="applyStyle(0)">Stylesheet 1</a>,
+              <a href="#" onclick="applyStyle(1)">Stylesheet 2</a>,
+              <a href="#" onclick="applyStyle(2)">Stylesheet 3</a>,
+              <a href="#" onclick="applyStyle(3)">No Style</a>.
+            </p>
+             <h1>Instructions</h1>
+            <p>Please modify this page to include a description of each stylesheet, including anything clever that 
+            		you did to achieve a given effect. Please also include the contributors to a given stylesheet.</p>
+         </div> <!-- text -->
+         <div id="sidebar">
+           <h3>Grading</h3>
+            <p>In order to get full credit for this assignment, you will need to demonstrate what you have learned 
+            		and how you helped your classmates. This means your contribution needs to be briefly described 
+                    on the page.</p>
+            <p>Participants: Jeffery,responsible for grey style sheet #0 <br>
+                 Samuel, green style sheet #1 <br>
+                Skyler, pink style #2 Organizing code and submission</p>
+            <a href="./changecsswithbuttons.html"> Also feel free to check out this short page I made using
+                external css rather than internal! - Skyler</a>
+          </div> <!--sidebar -->
+        </div> <!-- content -->
+        <div id="bottom">Submit this assignment by </div>
+        
+      </div> <!-- document -->
+      
+
+
+      <script>
+	    function disableStyles() 
+		{
+		  document.styleSheets[0].disabled = true;
+		  document.styleSheets[1].disabled = true;
+		  document.styleSheets[2].disabled = true;
+		  document.styleSheets[3].disabled = true;
+		}
+        
+		function applyStyle(i)
+		{
+			disableStyles();
+			document.styleSheets[i].disabled = false;
+		}
+	  </script>
+   </body>
+</html>

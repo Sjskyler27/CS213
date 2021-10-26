@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <link id="theme" rel="stylesheet" 
+        type="text/css" href="light.css" />
+  
+    <script>
+        function toggleTheme(value) {
+  
+            var sheets = document
+                .getElementsByTagName('link');
+  
+            sheets[0].href = value;
+        }
+    </script>
+</head>
+  
+<body>
+
+    <div class="document">
+        <div id="title">
+            <h2>Group Project: Changing Style Sheets</h2>
+            <p>Select a theme to choose diferent styles</p>
+        </div><!--title-->
+        <div id="menuBar">
+            <button onclick="toggleTheme('style0.css')">
+                No Style
+            </button>
+            <button onclick="toggleTheme('style1.css')">
+                style 1
+            </button>            
+            <button onclick="toggleTheme('style2.css')">
+                style 2
+            </button>            
+            <button onclick="toggleTheme('style3.css')">
+                style 3
+            </button>
+            <!--<button onclick="toggleTheme('style4.css')">
+                style 4
+            </button> -->
+        </div><!--menubar-->
+        <div id="text">
+            <h1>Text Filler</h1>
+            <blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum 
+                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent 
+                luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </blockquote>
+        </div><!--text-->
+        <div id="sidebar">
+            <h3>SIDEBAR</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum 
+                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent 
+                luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+        </div>
+    
+    
+    <img src="stock.jpg" alt="Mountain-view">
+    
+
+
+
+</body>
+  
+</html>

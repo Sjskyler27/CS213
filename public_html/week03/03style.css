@@ -1,0 +1,72 @@
+img.box {
+  background-color: lightgrey;
+  border: 15px solid green;
+  padding: 50px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.center {
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+.right {
+  position: absolute;
+  right: 0px;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+tr{
+    text-align: left;
+    border: black;
+}
+td, th {
+    border: 1px solid black;
+    text-align: left;
+}
+
+p.pretty {
+  
+  background-color: rgb(238, 229, 229);
+  width: 200px;
+  border: 15px solid lightblue;
+  padding: 50px;
+  margin: 20px;
+  text-align: center;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+.mydiv {
+  position: relative;
+  border: 5px outset black;
+  background-color: lightblue;    
+  text-align: center;
+  padding: 30px;
+  margin: 30px;
+}
+.prompt{
+  width: 250px;
+  position: relative;
+  border: 5px outset black;
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pics{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+.pics2 li {
+  display: inline-block;
+  padding-left: 200px;
+  padding-right: 11vw;
+}

@@ -1,0 +1,73 @@
+/* Sets the style of the title in the page
+    inherits the center alignment and text color*/
+#title {
+    background-color: rgb(17, 17, 17); 
+    color: #b80000;
+    top:0;
+    padding: 1px;
+    font-family:serif;
+    font-size: 2vw; /*keeps banner sized to screen*/
+    max-width: 100%;
+    max-height: 100vh;
+    width: auto;
+    margin: 0 auto;
+}
+/*adds a border arround images*/
+img.box {
+    background-color: rgb(136, 136, 136);
+    border: 1.6vw solid #570101;
+    padding: 50px;
+    position: relative;
+    display: block;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;
+
+}
+/*sets new area so banners are unefected*/
+.parent {
+    position: relative;
+    height: 100%;
+}
+
+/*link*/
+.button:link, .button:visited {
+    background-color:rgb(221, 39, 26) ;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+/*Sets the link when it is clicked*/
+.button:hover, .button:active {
+    background-color: white;
+    color: rgb(221, 39, 26);
+}
+.link:link, .link:visited {
+    color: rgb(4, 0, 255);
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.link:hover, .link:active {
+    color: rgb(72, 24, 248);
+}
+/*Sets the font size for h1 in the id="text"*/
+#text h1 {
+    font-size: 46px;
+}
+
+/*Sets the font size for p in the id="text"*/
+#text p {
+    font-size: 1.6vw;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style:normal;
+}
+#text{
+    position: relative;
+    padding: 10px;
+}

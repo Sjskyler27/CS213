@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.header {
+  background-color: #2196F3;
+  height: 150px;
+  background-color: 2196F3;
+  margin-bottom: 10px;
+}
+
+.menu {
+  grid-column: 1;
+  grid-row: 2/ span 2;
+  width:200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main {
+    grid-column: 2 / span 3;
+    grid-row: 2;
+}
+.footer {
+  grid-column: 2 / span 3;
+  grid-row: 3;
+}
+</style>  
+</head>
+<body>
+    
+  <div class="header"><h1>HEADER</h1></div>
+<div class="grid-container">
+  <div class="grid-item menu">2</div>
+  <div class="grid-item main">
+      
+  </div> 
+  <div class="grid-item footer">5</div>
+</div>
+</body>
+</html>
+
+

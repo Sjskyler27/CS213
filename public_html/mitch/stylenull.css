@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Rubik:wght@300&display=swap");
+
+body {
+  background-color: #FDF1D8;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.1em;
+}
+body p {
+  line-height: 1.35em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Julius Sans One", sans-serif;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 26.4px;
+  margin-bottom: 26.4px;
+}
+
+#top-h2 {
+  margin-bottom: 5px;
+}
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+
+.page {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 20px 172px 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 20px;
+}
+header a {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  z-index: 1;
+}
+header nav {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  align-self: center;
+  z-index: 0;
+  height: 50px;
+  background-color: #F7B226;
+}
+nav ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: 192px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
+  height: 50px;
+  justify-items: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: #F7B226;
+}
+nav li {
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  line-height: 3em;
+}
+nav a {
+  display: inline-block;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+nav a:link, nav a:visited {
+  color: #6F6E5D;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #F7B226;
+  background-color: #6F6E5D;
+}
+#why {
+  grid-column: 3 / 4;
+}
+#what {
+  grid-column: 5 / 6;
+}
+#purchase {
+  grid-column: 7 / 8;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#cave-img {
+  float: right;
+  margin-top: 21px;
+}
+
+#grid-item-1 {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 1fr 138px 1fr;
+  width: 100%;
+}
+#grid-item-1 img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: 0;
+  width: 100%;
+  align-self: end;
+}
+#grid-item-1 div {
+  grid-column: 2 / -2;
+  grid-row: 2 / -2;
+  justify-self: center;
+  align-self: center;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, .90);
+  padding: 20px;
+  line-height: none;
+  width: 85%;
+  text-align: center;
+  
+}
+
+#grid-item-2 h2 {
+  text-align: center;
+}
+
+#grid-item-6 h2 {
+  text-align: center;
+}
+
+footer {
+  background-color: #F7B226;
+  display: grid;
+  grid-template-columns: 1fr 60px 60px 60px;
+  margin-top: 40px;
+  align-items: center;
+}
+footer p {
+  margin: 20px;
+}
+footer img {
+  margin-top: 4px;
+}
+#facebook {padding-right: 10px;}
+#instagram {padding-right: 10px;}
+#twitter {padding-right: 10px;}
+
+
+.cite {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 970px) {
+    .main{
+      display: block;
+  }
+  #grid-item-1 #why-title {
+    width: 90%;
+    padding: 0 20px 0 20px;
+    font-size: .85em;
+  }
+    img {
+    width: 100%; 
+  }
+  
+}
+
+#what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  justify-items: center;
+  padding: 0;
+}
+
+#what-grid h2 {
+  text-align: center;
+}
+
+.what-title {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.what-title {
+  padding: 0 20px 0 20px;
+}
+
+#what-img img {
+  border: #243156 solid 2px;
+}
+#grid-img img {
+  border: #243156 solid 2px;
+}
+#size-img img {
+  border: #243156 solid 2px;
+}
+#what-img {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  justify-self: left;
+  padding: 20px 24px 20px 20px;
+  background-color: #6F6E5D;
+  border-right: #6F6E5D solid 2px;
+}
+#what-what-info {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: #6F6E5D;
+  color: #ffffff;
+  padding-top: 132px;
+  padding-bottom: 132px;
+  padding-right: 46px;
+  padding-left: 54px;
+}
+#grid-img {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  padding: 20px;
+  justify-self: right;
+}
+#what-grid-info {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  padding-right: 54px;
+  padding-left: 46px;
+  align-self: center;
+}
+#size-img {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  background-color: #6F6E5D;
+  border-right: #6F6E5D solid 2px;
+  justify-self: left;
+  padding: 20px 24px 20px 20px;
+}
+#what-size-info {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  background-color: #6F6E5D;
+  color: #ffffff;
+  padding-top: 109px;
+  padding-bottom: 108px;
+  padding-right: 46px;
+  padding-left: 54px;
+}
+
+@media screen and (max-width: 970px) {
+  #what-grid {
+      display: block;
+  }
+  
+   #what-img   { 
+    border-right: hidden;
+     padding-bottom: 0;
+}
+  #grid-img {
+    padding-bottom: 0;
+  }
+  #size-img   { 
+    border-right: hidden;
+    padding-bottom: 0;
+}
+    #what-grid img{
+    width: 100%; 
+    padding: 0;
+  }
+  #what-grid h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  #what-what-info {
+    padding: 20px 20px 20px 20px;
+    margin-top: -20px;
+  }
+  #what-grid-info {
+    padding: 20px 20px 20px 20px;
+    margin-top: -20px;
+  }
+  #what-size-info {
+    padding: 20px 20px 20px 20px;
+    margin-top: -20px;
+  }
+  .what-title #title {
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #6f6e5d;
+  padding: 20px;
+  border: #243156 solid 2px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.offer-grid section {
+  grid-column: 1 / 2;
+  color: white;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.offer-grid img {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  border: #243156 solid 2px;
+}
+
+.purchase-page h1 {
+  text-align: center;
+}
+.purchase-page h2 {
+  line-height: 0;
+}
+.par-purchase-1 {
+  margin-top: 5px;
+}
+.par-purchase-2 {
+  text-align: right;
+  margin-right: 20px;
+  line-height: 0;
+}
+.par-purchase-3 {
+  margin-top: 5px;
+}
+.offers {
+  margin-top: -10px;
+}
+.h2-purchase-3 {
+  margin-top: 40px;
+}
+
+.form-grid {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px 150px 60px;
+  align-items: center;
+  padding: 0;
+  grid-column-gap: 40px;
+  padding: 20px;
+  border: #243156 solid 2px;
+}
+.name {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.email {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.msg {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  z-index: 1;
+}
+.button {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  justify-self: center;
+}
+
+.name input {
+  width: 84.97%;
+  border-color: #243156;
+}
+.email input {
+  width: 83.78%;
+  border-color: #243156;
+}
+.msg textarea {
+  width: 99.5%;
+  height: 100px;
+  margin-top: 10px;
+  resize: none;
+  border-color: #243156;
+}
+.button button {
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: #6f6e5d;
+  border-color: #243156;
+}
+
+form li {
+  list-style: none;
+}
+
+.purchase-button div {
+  background-color: #6f6e5d/*green*/;
+  border: white solid 2px;
+  padding: 8px;
+}
+.purchase-button {
+  text-decoration: none;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 70%;
+}
+.purchase-button p {
+  line-height: 0;
+}
+  
+@media screen and (max-width: 970px) {
+  .offer-grid {
+    display: block;
+  }
+  .par-purchase-2 {
+    margin-bottom: 30px;
+  }
+  .form-grid {
+    display: block;
+  }
+  .msg textarea {
+  width: 100%;
+      margin-bottom: 20px;
+    margin-top: 10px;
+  }
+    .email input {
+  width: 100%;
+      margin-bottom: 20px;
+    margin-top: 10px;
+    }
+      .name input {
+  width: 100%;
+      margin-bottom: 20px;
+    margin-top: 10px;
+    }
+  .button {
+    text-align: center;
+  }
+  .purchase-page h2 {line-height: 1em; margin-top: 10px; margin-bottom: 10px;}
+  .par-purchase-2 {line-height: 1em; margin-top: 0; margin-left: 20px; margin-bottom: 15px;}
+  .last-offer {margin-bottom: 30px;}
+  .purchase-button {margin-left: 0;}
+}
+
+@media screen and (max-width: 650px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: 192px 1fr;
+    height: 100px;
+    margin-top: -25px;
+    grid-template-rows: 33px 33px 33px
+  }
+  nav ul a {
+    height: 33px;
+  }
+  nav ul #what a {display: initial;}
+  nav ul #why a {display: initial;}
+    nav ul #purchase a {display: initial;}
+  #what {
+    grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  }
+  #why {
+    grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  }
+  #purchase {
+    grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  }
+  
+  header a {
+    margin-top: 5px;
+  }
+  }
