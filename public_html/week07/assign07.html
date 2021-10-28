@@ -1,1 +1,63 @@
-<h1>This will be assignment #7</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculate Your Mortgage!</h1>
+    <div class = inputForm>
+        <form>
+            <label for="apr">APR:</label>
+            <input type="text" id="apr" name="apr" onchange="validate('apr', apr)"><p id = "aprerror"></p><br>
+            <label for="term">Loan Term:</label>
+            <input type="text" id="term" name="term" onchange="validate('term', term)"><p id = "termerror"></p><br>
+            <label for="amount">Loan Amount:</label>
+            <input type="text" id="amount" name="amount" onchange="validate('amount', amount)"><p id = "amounterror"></p><br>
+            <input type="reset" value="clear" id = "clear">
+            <button type = "button" onclick="calc()">Click me</button><br><br>
+            <label for="payment">Payment:</label>
+            <output type="text" id="payment" name="payment">
+          </form>
+    </div><!--input-->
+
+<script>
+    let apr, term, amount, monthlyPayment, boolCalc = 0;
+    function calc() {
+        validate();
+        if (!boolCalc){
+            return;
+        }
+        var r = (apr/100)/12;
+        var n = term * 12;
+        monthlyPayment = amount* r * (((1+r)**n)/(((1+r)**n)-1));
+        console.log(monthlyPayment);
+        document.getElementById("payment").value = monthlyPayment.toFixed(2);
+    }
+
+    function validate(field, id){
+        apr = document.getElementById("apr").value;
+        console.log(apr);
+        term = document.getElementById("term").value;
+        console.log(term);
+        amount = document.getElementById("amount").value;
+        console.log(amount);
+
+        console.log(id.value + "id")
+        if(isNaN(id.value)){
+            field += "error";
+            console.log(field);
+            document.getElementById(field).innerHTML = "Input not Valid";
+            boolCalc = 0;
+        }
+        else{
+            document.getElementById(field).innerHTML = "";
+            boolCalc = 1;
+        }
+        
+    }
+</script>
+
+</body>
+</html>
