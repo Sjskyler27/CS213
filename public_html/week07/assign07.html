@@ -27,6 +27,9 @@
     </div><!--input-->
 
 <script>
+    window.onload = function() {
+    document.getElementById("apr").focus();
+    };
     let apr=0, term=0, amount=0, monthlyPayment, update=0, boolCalc = 0;
     function calc() {
         //check for all values being true and calc is available
