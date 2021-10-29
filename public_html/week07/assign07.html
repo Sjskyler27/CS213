@@ -14,24 +14,25 @@
         <form>
             <!--apr-->
             <label for="apr">APR:</label>
-            <input type="text" id="apr" name="apr"
+            <input type="text" id="apr" name="apr" title="Enter the Annual \n Percentage Rate."
              onchange="validate('apr', apr)"><p id = "aprerror"></p><br>
              <!--term-->
             <label for="term">Loan Term:</label>
-            <input type="text" id="term" name="term"
+            <input type="text" id="term" name="term" title = "Enter the amount of years till paid off."
              onchange="validate('term', term)"><p id = "termerror"></p><br>
              <!--amount-->
             <label for="amount">Loan Amount:</label>
-            <input type="text" id="amount" name="amount"
+            <input type="text" id="amount" name="amount" title = "Enter the amount of the loan"
              onchange="validate('amount', amount)"><p id = "amounterror"></p><br>
              <!--payment-->
             <label for="preferedPayment">Prefered Payment:</label>
-            <input type="text" id="preferedPayment" name="preferedPayment"
+            <input type="text" id="preferedPayment" name="preferedPayment" 
+             title = "Enter the amount you will pay per month, you may leave this blank"
              onchange="validate('preferedPayment', preferedPayment)">
              <p id = "preferedPaymenterror"></p><br>
              <!--buttons-->
             <input type="reset" value="clear" id = "clear" onclick="getfocus()">
-            <button type = "button" onclick="calc()">Click me</button><p id = "buttonerror"></p><br><br>
+            <button type = "button" onclick="calc()">Calculate</button><p id = "buttonerror"></p><br><br>
             <!--labels-->
             <h2>Calculated Payments</h2>
             <label for="payment">Monthly Payment:</label>
