@@ -22,9 +22,11 @@
             <input type="reset" value="clear" id = "clear" onclick="getfocus()">
             <button type = "button" onclick="calc()">Click me</button><p id = "buttonerror"></p><br><br>
             <label for="payment">Payment:</label>
-            <output type="text" id="payment" name="payment"><br><br>
-            <label for="totalCost">Total Cost: </label>
-            <output type="text" id="totalCost" name="totalCost">
+            <output type="text" id="payment" name="payment"></output><br><br>
+            <div>
+            <label for="totalCost">Total Cost:</label>
+            <output type="text" id="totalCost" name="totalCost"></output>
+            </div>
           </form>
     </div><!--input-->
 
@@ -46,9 +48,12 @@
         var n = term * 12;
         monthlyPayment = amount* r * (((1+r)**n)/(((1+r)**n)-1));
         console.log(monthlyPayment);
+        
+        totalCost = term * monthlyPayment * 12;
+        console.log(totalCost);
+        document.getElementById("totalCost").innerHTML = totalCost.toFixed(2);
         document.getElementById("payment").value = monthlyPayment.toFixed(2);
-        totalCost = n*monthlyPayment;
-        document.getElementById("totalCost").value = totalCost.toFixed(2);
+        
     }
 
     /**id == apr term amount etc based on what you send*/
