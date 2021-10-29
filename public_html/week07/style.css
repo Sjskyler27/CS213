@@ -9,6 +9,7 @@
     height: auto;
     max-height: 680px;
     flex: 30%;
+    margin-top: 0;
 }
 #house2{
     width: 100%;
@@ -18,6 +19,7 @@
 }
 img{
     width: 100%;
+    margin-top: 0;
 }
 #UI{
     width: 400px;
@@ -26,9 +28,10 @@ img{
     padding: 10px;
     border: 10px solid grey;
     border-radius: 5px;
-    height: 650px;
+    height: auto;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 52px;
 }
 
 #UI form{
@@ -42,6 +45,9 @@ img{
     font-size: small;
 }
 h1{
+    background-color: lightgrey;
+    border: solid 10px grey;
+    border-radius: 5px;
     text-align: center;
 }
 @media (max-width: 1100px) {
