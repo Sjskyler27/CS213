@@ -47,7 +47,7 @@
         monthlyPayment = amount* r * (((1+r)**n)/(((1+r)**n)-1));
         console.log(monthlyPayment);
         document.getElementById("payment").value = monthlyPayment.toFixed(2);
-        TotalCost = n*monthlyPayment;
+        totalCost = n*monthlyPayment;
         document.getElementById("totalCost").value = totalCost.toFixed(2);
     }
 
