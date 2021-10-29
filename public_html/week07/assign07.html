@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" type="text/css" href="style.css">
     <title>Mortgage Calculator</title>
@@ -9,7 +10,7 @@
 <body>
     
     <div class="document">
-    <div id = "house1"><img src="house1.jpg"></div>
+    <div id = "house1"><img src="house1.jpg" alt = "image of a house"></div>
     <div id = "UI">
         <form>
             <h2>Calculate Your Mortgage!</h2>
@@ -37,25 +38,25 @@
             <!--labels-->
             <h2>Calculated Payments</h2>
             <label for="payment">Monthly Payment:</label>
-            <output type="text" id="payment" name="payment"></output><br><br>
+            <output id="payment" name="payment"></output><br><br>
             <label for="totalCost">Total Cost:</label>
-            <output type="text" id="totalCost" name="totalCost"></output><br><br>
+            <output id="totalCost" name="totalCost"></output><br><br>
 
 
             <h2>Personal Payments</h2>
             <label for="totalCostP">Total Cost based on payments:</label>
-            <output type="text" id="totalCostP" name="totalCostP"></output><br><br>
+            <output id="totalCostP" name="totalCostP"></output><br><br>
             <label for="moneySaved">Money Saved:</label>
-            <output type="text" id="moneySaved" name="moneySaved"></output><br><br>
+            <output id="moneySaved" name="moneySaved"></output><br><br>
             <label for="totalMonths">Total Months:</label>
-            <output type="text" id="totalMonths" name="totalMonths"></output><br><br>
+            <output id="totalMonths" name="totalMonths"></output><br><br>
             <label for="totalYears">Total Years:</label>
-            <output type="text" id="totalYears" name="totalYears"></output><br><br>
+            <output id="totalYears" name="totalYears"></output><br><br>
             
 
         </form>
     </div><!--input-->
-    <div id = "house2"><img src="house2.jpg"></div>
+    <div id = "house2"><img src="house2.jpg" alt = "image of a house"></div>
     </div><!--document-->
 <script>
     //autofocus on apr when loaded
