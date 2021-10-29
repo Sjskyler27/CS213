@@ -23,6 +23,8 @@
             <button type = "button" onclick="calc()">Click me</button><p id = "buttonerror"></p><br><br>
             <label for="payment">Payment:</label>
             <output type="text" id="payment" name="payment">
+            <label for="totalCost">Total Cost: </label>
+            <output type="text" id="totalCost" name="totalCost">
           </form>
     </div><!--input-->
 
@@ -31,7 +33,7 @@
     window.onload = function() {
     document.getElementById("apr").focus();
     };
-    let apr=0, term=0, amount=0, monthlyPayment, update=0, boolCalc = 0;
+    let apr=0, term=0, amount=0, monthlyPayment, totalCost, update=0, boolCalc = 0;
     function calc() {
         //check for all values being true and calc is available
         if (!boolCalc || !apr || !term || !amount){
@@ -45,6 +47,8 @@
         monthlyPayment = amount* r * (((1+r)**n)/(((1+r)**n)-1));
         console.log(monthlyPayment);
         document.getElementById("payment").value = monthlyPayment.toFixed(2);
+        TotalCost = n*monthlyPayment;
+        document.getElementById("totalCost").value = totalCost.toFixed(2);
     }
 
     /**id == apr term amount etc based on what you send*/
