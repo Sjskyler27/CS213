@@ -70,16 +70,7 @@ h2{
     font-size: 30px;
 }
 @media (max-width: 1100px) {
-    #grid{
-        display: grid;
-        grid-template-columns: auto;
-    }
-    #grid .float{
-        text-align:center;
-    }
-    #grid input{
-        float: center;
-    }
+    
     #house1{
         display: none;
     }
@@ -123,6 +114,7 @@ h2{
     }
     h2{
         font-size: 22px;
+        color: #fe9201;
     }
     body{
         background-image: url('house1.jpg');
