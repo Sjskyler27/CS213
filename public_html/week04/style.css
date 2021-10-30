@@ -71,8 +71,7 @@ img.box {
     position: relative;
     padding: 10px;
 }
-#sidebar {
-        
+#sidebar { 
     float: left;
     height: 600px;
     padding: 8px;
