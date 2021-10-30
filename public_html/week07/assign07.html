@@ -14,27 +14,31 @@
     <div id = "UI">
         <form>
             <h2>Calculate Your Mortgage!</h2>
-            <!--apr-->
-            <label for="apr">APR:</label>
-            <input type="text" id="apr" name="apr" title="Enter the Annual Percentage Rate."
-             onchange="validate('apr', apr)"><p id = "aprerror"></p><br>
-             <!--term-->
-            <label for="term">Loan Term:</label>
-            <input type="text" id="term" name="term" title = "Enter the amount of years till paid off."
-             onchange="validate('term', term)"><p id = "termerror"></p><br>
-             <!--amount-->
-            <label for="amount">Loan Amount:</label>
-            <input type="text" id="amount" name="amount" title = "Enter the amount of the loan"
-             onchange="validate('amount', amount)"><p id = "amounterror"></p><br>
-             <!--payment-->
-            <label for="preferedPayment">Extra Payment:</label>
-            <input type="text" id="preferedPayment" name="preferedPayment" 
-             title = "Enter the amount extra you will pay per month, 
-             you may leave this blank. May be negetive"
-             onchange="validate('preferedPayment', preferedPayment)">
-             <p id = "preferedPaymenterror"></p><br>
+            <div id ="grid">
+                <!--apr-->
+                <label for="apr" class = "float">APR:</label>
+                <input type="text" id="apr" name="apr" title="Enter the Annual Percentage Rate."
+                onchange="validate('apr', apr)"><br><p id = "aprerror"></p>
+                <!--term-->
+                <label for="term" class = "float">Loan Term:</label>
+                <input type="text" id="term" name="term" title = "Enter the amount of years till paid off."
+                onchange="validate('term', term)"><br><p id = "termerror"></p>
+                <!--amount-->
+                <label for="amount" class = "float">Loan Amount:</label>
+                <input type="text" id="amount" name="amount" title = "Enter the amount of the loan"
+                onchange="validate('amount', amount)"><br><p id = "amounterror"></p>
+                <!--payment-->
+                <label for="preferedPayment" class = "float">Extra Payment:</label>
+                <input type="text" id="preferedPayment" name="preferedPayment" 
+                title = "Enter the amount extra you will pay per month, 
+                you may leave this blank. May be negetive"
+                onchange="validate('preferedPayment', preferedPayment)">
+                <br><p id = "preferedPaymenterror"></p>
+            </div>
+
              <!--buttons-->
-            <input type="reset" value="clear" id = "clear" onclick="getfocus()">
+            <input type="reset" value="clear" id = "clear"
+            style = "float: none;" onclick="getfocus()">
             <button type = "button" onclick="calc()">Calculate</button><p id = "buttonerror"></p><br><br>
             <!--labels-->
             <h2>Calculated Payments</h2>
@@ -44,7 +48,7 @@
             <output id="totalCost" name="totalCost"></output><br><br>
 
 
-            <h2>Personal Payments</h2>
+            <h2>Savings With Extra Payments</h2>
             <label for="totalCostP">Total Cost based on payments:</label>
             <output id="totalCostP" name="totalCostP"></output><br><br>
             <label for="moneySaved">Money Saved:</label>
