@@ -3,7 +3,6 @@
     flex-wrap: nowrap;
     background-color: #2196F3;
     height: 150px;
-    background-color: 2196F3;
     margin-bottom: 10px;
 }
 h1{
@@ -140,5 +139,41 @@ img{
     .button{
         margin-bottom: 10px;
         width: 50px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .icon{
+        display: none;
+    }
+    .menu{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .main {
+        row-gap: 10px;
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 14px;
+    }
+    .footer {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-evenly;
+        font-size: 10px;
+    }
+    h1{
+        font-size: 45px;
+        padding-top: 30px;
+        float: right;
+        padding-top: 10px;
+    }
+    
+    .header{
+        
+        height:75px;
     }
 }
