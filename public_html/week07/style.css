@@ -69,6 +69,9 @@ h2{
     color: #ac3d3f;
     font-size: 30px;
 }
+.background {
+    display: none;
+}
 @media (max-width: 1100px) {
     
     #house1{
@@ -120,4 +123,61 @@ h2{
         background-image: url('house1.jpg');
         background-size: 700px;
     }
+    .parallax {
+        height: 500px; /* fallback for older browsers */
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-perspective: 300px;
+        perspective: 300px;
+      }
+    
+      .parallax__group {
+        position: relative;
+        height: 500px; /* fallback for older browsers */
+        height: 100vh;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+    
+      .parallax__layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .parallax__layer--base {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        z-index: 4;
+      }
+    
+      .parallax__layer--back {
+        -webkit-transform: translateZ(-300px) scale(2);
+        transform: translateZ(-300px) scale(2);
+        z-index: 3;
+      }
+      .parallax__layer {
+        padding-top: 10vh 0;
+        padding-bottom: 100vh 0;
+      }
+      .fore {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: fuchsia;
+      }
+      .background {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width:100%;
+      }
+    
 }
