@@ -28,12 +28,11 @@
     /*Sets the div class="document" to the right */
     .document {
         background-color: rgb(182, 182, 182);
-        position: absolute;
-        float: right;
         right: 0px;
         margin: 20px;
-        width: 70%; 
+        /*width: 70%; */
         border: 3px solid rgb(0, 0, 0);
+        flex: 70%;
     }
     .info {
         background-color: rgb(136, 136, 136);
@@ -48,19 +47,7 @@
     }
     
     /*Sets the style for the sidebar. I could have put the menubar here, but chose the grading info instead.  */
-    #sidebar {
-        position:absolute;
-        float: left;
-        height: 95%;
-        width: 35%;
-        left: -40%;
-        top: 0px;
-        background-color: rgb(53 34 30);
-        padding: 20px;
-        font-size: 1.4vw;
-        margin-bottom: 20px;
-        color: #a3d3e0;
-    }
+    
 
     /*the bottom is the footer of the page. */
     #bottom {
@@ -82,7 +69,20 @@
     <p>Welcome to your local adventurers guild! We hope to provide wonderful campaigns along with any merchandise you need!</p>
 </div><!--title-->
 <div class="parent">
+    <div id="sidebar">
+        <h3>What we're all about!</h3>
+        <p>We are a local D&D guild here in rexburg idaho!
+            We provide a safe and entertaining space for all 
+            your amazing adventures to be held.
+        </p>
+        <p>We also sell merchandise locally for pickup, some hand made some shipped in from other companies.
+            anything from figurines to our very own campaigns feel free to click the link to check out our merch!
+        </p>
+    
+        <a class="button" href="./merchandise.html"> Merchandise!</a>
+    </div> <!--sidebar -->
     <div class="document">
+        
         <div class="content">
             <div id="text">
                 <p>we hold local campaigns for any and all who are interested on tuesdays and saterdays at 7pm.
@@ -98,18 +98,6 @@
                     All are welcome!
                 </p>
             </div><!--text-->
-            <div id="sidebar">
-                <h3>What we're all about!</h3>
-                <p>We are a local D&D guild here in rexburg idaho!
-                    We provide a safe and entertaining space for all 
-                    your amazing adventures to be held.
-                </p>
-                <p>We also sell merchandise locally for pickup, some hand made some shipped in from other companies.
-                    anything from figurines to our very own campaigns feel free to click the link to check out our merch!
-                </p>
-            
-                <a class="button" href="./merchandise.html"> Merchandise!</a>
-            </div> <!--sidebar -->
         </div><!--content-->
         <div id="bottom">
             <p>We do not claim any ownership over any products made or distributed by wizards of the coast TM.</p>

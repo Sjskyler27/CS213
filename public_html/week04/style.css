@@ -25,6 +25,8 @@ img.box {
 }
 /*sets new area so banners are unefected*/
 .parent {
+    display: flex;
+    flex-direction: row;
     position: relative;
     height: 100%;
 }
@@ -68,4 +70,24 @@ img.box {
 #text{
     position: relative;
     padding: 10px;
+}
+#sidebar {
+        
+    float: left;
+    height: 600px;
+    padding: 8px;
+    margin-top: 20px;
+    background-color: rgb(53 34 30);
+    font-size: 1.4vw;
+    margin-bottom: 20px;
+    color: #a3d3e0;
+    flex: 25%;
+}
+@media (max-width: 1000px) {
+    .parent{
+        flex-wrap: wrap;
+    }
+    #sidebar{
+        height: 100%;
+    }
 }
