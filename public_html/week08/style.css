@@ -11,4 +11,11 @@
     border: 5px solid black;
     margin: auto;
     margin-top: 20px;
+    padding:auto;
+}
+.item img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: auto;
 }
