@@ -8,21 +8,38 @@
     <title>DiceMasters</title>
 </head>
 <body>
+    <div id = "banner">
+        <img src="Banner.png">
+    </div>
     <div id="page">
-        <div id = "pagedescription">
-        </div>
         <div id="items">
-            <div id = starterPack class = item>
-                <img src="starterPack.jpg" alt = "starterPack">
+            <div id = starter class = item>
+                <p class="name" id = "starterName">
+                    Starter Pack
+                </p>
+                <img src="starter.jpg" alt = "starter">
+                <input class="quantity" id="starterQ" min="0"value="0" type="number"
+                 onchange="getQuantity(item1, 'starterQ')">
+                <p class="description">
+                    Start your journy!
+                </p>
             </div>
-            <div id = boosterPack class = item>
-                <img src="boosterPack.jpeg" alt = "starterPack">
+            <div id = booster class = item>
+                <p class="name" id=boosterName>
+                Booster Pack
+                </p>
+                <img src="booster.jpeg" alt = "booster">
+                <input class="quantity" id="boosterQ" min="0"value="0" type="number"
+                onchange="getQuantity(item2, 'boosterQ')">
+                <p class="description">
+                    Add to your colection!
+                </p>
             </div>
             <div id = gameMat class = item>
-                <img src="jumboPack.jpg" alt = "starterPack">
+                <img src="jumbo.jpg" alt = "starter">
             </div>
-            <div id = jumboPack class = item>
-                <img src="playMat.jpg" alt = "starterPack">
+            <div id = jumbo class = item>
+                <img src="playMat.jpg" alt = "starter">
             </div>
         </div>
     </div>
@@ -38,7 +55,12 @@
                 this.description = description;
                 this.src = src;
             }
-
+        }
+        item1 = new Item("Starter", 15, "Good stuff help you be great", "starter.jpg");
+        item2 = new Item("Booster", 1.5, "Good stuff help you be great", "booster.jpg");
+        function getQuantity(item, id){
+            item.quantity = document.getElementById(id).value;
+            console.log(item.quantity);
         }
         
     </script>

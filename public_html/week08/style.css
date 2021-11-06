@@ -1,14 +1,21 @@
+body{
+    background-color: black;
+}
+#banner img{
+    width: 100%;
+}
 #page{
-    background-color: whitesmoke;
-    border: 10px solid grey;
+    background-color: white;
+    border: 10px solid #a21c22;
     margin: 20px;
     padding: 20px;
 }
 .item{
     width: 300px;
     height:300px;
-    background-color: green;
+    background-color: #5179a2;
     border: 5px solid black;
+    border-radius: 10px;;
     margin: auto;
     margin-top: 20px;
     padding:auto;
@@ -18,4 +25,21 @@
     width: 150px;
     height: 150px;
     margin: auto;
+    margin-top: 10px;
+}
+.quantity{
+    display: block;
+    width: 50px;
+    margin: auto;
+    margin-top: 10px;
+}
+.name{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+.description{
+    text-align: center;
+    color: grey;
+    font-size: 16px;
 }
