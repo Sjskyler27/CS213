@@ -19,6 +19,7 @@ body{
     margin: auto;
     margin-top: 20px;
     padding:auto;
+    padding-bottom: 10px;
 }
 .item img{
     display: block;
@@ -40,8 +41,41 @@ body{
 }
 .description{
     text-align: center;
-    color: grey;
+    color: black;
     font-size: 16px;
+}
+#UI{
+    width: 300px;
+    border: 10px solid #a21c22;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#UI form{
+    width:275px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+#grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#grid .float{
+    text-align:right;
+}
+#grid input{
+    float: right;
+}
+
+#UI p{
+    color: red;
+    font-size: small;
 }
 @media (max-width: 700px) {
     .item{
@@ -64,5 +98,27 @@ body{
         text-align: center;
         color: black;
         font-size: 10px;
+    }
+
+    #grid{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #grid .float{
+        text-align:center;
+    }
+    #grid input{
+        float: center;
+    }
+    #UI{
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #UI form{
+        width:175px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }
