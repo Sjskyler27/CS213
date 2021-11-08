@@ -21,7 +21,7 @@
                 <input class="quantity" id="starterQ" min="0"value="0" type="number"
                  onchange="getQuantity(item1, 'starterQ')">
                 <p class="description">
-                    Start your journy!
+                    Start your journey!
                 </p>
             </div>
             <div id = booster class = item>
@@ -36,13 +36,78 @@
                 </p>
             </div>
             <div id = gameMat class = item>
+                <p class="name" id=jumboName>
+                    Jumbo Pack
+                    </p>
                 <img src="jumbo.jpg" alt = "starter">
+                <input class="quantity" id="jumboQ" min="0"value="0" type="number"
+                onchange="getQuantity(item3, 'jumboQ')">
+                <p class="description">
+                    Start your collection off with a Bang!
+                </p>
             </div>
             <div id = jumbo class = item>
+                <p class="name" id=playMatName>
+                    Play Mat
+                    </p>
                 <img src="playMat.jpg" alt = "starter">
+                <input class="quantity" id="playMatQ" min="0"value="0" type="number"
+                onchange="getQuantity(item4, 'playMatQ')">
+                <p class="description">
+                    Enhance your play experiance with this amazing neoprine foam pad!
+                </p>
             </div>
+        </div><!--items-->
+        <br>
+        <div id="UI" style="padding-top: 15px;">
+            <form>
+                <h2 id = "total">Your Total Is: </h2>
+                <div id ="grid">
+                    <!--first name-->
+                    <label for="first_name" class = "float">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" title="Enter your first name"
+                    onchange="validate('first_name', first_name)"><br><p id = "first_nameerror"></p>
+                    <!--last name-->
+                    <label for="last_name" class = "float">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" title = "Enter your last name."
+                    onchange="validate('last_name', last_name)"><br><p id = "last_nameerror"></p>
+                    <!--address-->
+                    <label for="address" class = "float">Address:</label>
+                    <input type="text" id="address" name="address" title = "Enter your address"
+                    onchange="validate('address', address)"><br><p id = "addresserror"></p>
+                    <!--phone-->
+                    <label for="phone" class = "float">Phone:</label>
+                    <input type="text" id="phone" name="phone" title = "Enter your phone"
+                    onchange="validate('phone', phone)">
+                    <br><p id = "phoneerror"></p>
+                    <!--credit-->
+                    <label for="credit" class = "float">Credit Card Number:</label>
+                    <input type="text" id="credit" name="credit" title = "Enter your credit card number"
+                    onchange="validate('credit', credit)"><br><p id = "crediterror"></p>
+                    <!--ex date-->
+                    <label for="date" class = "float">Experation Date:</label>
+                    <input type="text" id="date" name="date" title = "Enter experation date"
+                    onchange="validate('date', date)">
+                    <br><p id = "dateerror"></p>
+                    <br>
+                    <div>
+                    <input type="radio" id="master" name="card" value="master">
+                    <label for="master">Master</label><br>
+                    <input type="radio" id="visa" name="card" value="visa">
+                    <label for="visa">Visa</label><br>
+                    <input type="radio" id="americanExpress" name="card" value="americanExpress">
+                    <label for="americanExpress">Express</label>
+                    </div>
+                    <br>
+                </div>
+    
+                 <!--buttons-->
+                <input type="reset" value="clear" id = "clear" name = "reset"
+                style = "float: none;" onclick="getfocus()">
+                <button type = "submit">submit</button><p id = "buttonerror"></p><br><br>
+            </form>    
         </div>
-    </div>
+    </div><!--page-->
     <div id=checkout>
 
     </div>
@@ -56,13 +121,36 @@
                 this.src = src;
             }
         }
-        item1 = new Item("Starter", 15, "Good stuff help you be great", "starter.jpg");
-        item2 = new Item("Booster", 1.5, "Good stuff help you be great", "booster.jpg");
+        let item1 = new Item("Starter", 15, "Good stuff help you be great", "starter.jpg");
+        let item2 = new Item("Booster", 1.50, "Good stuff help you be great", "booster.jpg");
+        let item3 = new Item("Jumbo", 50, "Good stuff help you be great", "jumbo.jpg");
+        let item4 = new Item("PlayMat", 20, "Good stuff help you be great", "playMat.jpg");
+        
+        
+        let total=0;
+
         function getQuantity(item, id){
             item.quantity = document.getElementById(id).value;
             console.log(item.quantity);
+            total = (item1.quantity * item1.price)+ 
+            (item2.quantity * item2.price) +
+            (item3.quantity * item3.price)+
+            (item4.quantity * item4.price);            
+            document.getElementById("total").innerHTML = "Your Total Is: " + total;
         }
-        
+
+        function validate(field, id){ 
+        }
+
+        function getfocus() {
+        //document.getElementById("first_name").focus();
+        document.getElementById("first_nameerror").innerHTML = ""; 
+        document.getElementById("last_nameerror").innerHTML = "";
+        document.getElementById("addresserror").innerHTML = "";
+        document.getElementById("phoneerror").innerHTML = "";
+        document.getElementById("crediterror").innerHTML = "";
+        document.getElementById("dateerror").innerHTML = "";
+    }
     </script>
 </body>
 </html>
