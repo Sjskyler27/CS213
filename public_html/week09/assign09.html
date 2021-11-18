@@ -1,1 +1,101 @@
-<h1>This will be assignment #9</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type="text/css" href="style.css">
+    <title>Countries</title>
+</head>
+<body>
+    <h1>SELECT A COUNTRY</h1>
+    <div id = countries>
+        <div id = usa>
+            <img onclick="loadusa()" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" alt="usa">
+        </div>
+        <div id = canada>
+            <img onclick="loadcanada()" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" alt="canada">
+        </div>
+        <div id = russia>
+            <img onclick="loadrussia()" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="russia">
+        </div>
+        <div id = mexico>
+            <img onclick="loadmexico()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1200px-Flag_of_Mexico.svg.png" alt="mexico">
+        </div>
+    </div>
+    <div id = capitals></div>
+    <br>
+    <label for="json">JSON FILE:</label>
+    <input type="text" id="json" name="json" title = "Enter the file or url" value="json.txt">
+    <button onclick="loadJSON()">Load</button>
+    <div id= "students"></div>
+
+
+    <script>
+        function loadusa() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "usa.txt");
+            xhttp.send();
+            xhttp.onload = function() {
+                document.getElementById("capitals").innerHTML = this.responseText;
+            }
+        }
+        function loadcanada() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "canada.txt");
+            xhttp.send();
+            xhttp.onload = function() {
+                document.getElementById("capitals").innerHTML = this.responseText;
+            }
+        }
+        function loadrussia() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "russia.txt");
+            xhttp.send();
+            xhttp.onload = function() {
+                document.getElementById("capitals").innerHTML = this.responseText;
+            }
+        }
+        function loadmexico() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "mexico.txt");
+            xhttp.send();
+            xhttp.onload = function() {
+                document.getElementById("capitals").innerHTML = this.responseText;
+            }
+        }
+        function loadJSON() {
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function() { 
+                console.log(7);
+                try{
+                myObj = JSON.parse(this.responseText);
+                }
+                catch(err) {
+                document.getElementById("students").innerHTML = "File not found";
+                console.log("fail");
+                return;
+                }
+                let text="";
+                for(var i=0; i<myObj.students.length; i++){
+                    text += myObj.students[i].first + " " +myObj.students[i].last + " "
+                    + myObj.students[i].address.city + " " + myObj.students[i].address.state + " " + myObj.students[i].address.zip + " " 
+                    +myObj.students[i].major + " " +myObj.students[i].gpa + "<br>";
+                }
+                document.getElementById("students").innerHTML = text;
+                console.log(myObj.students[0].first);
+            }
+            try{
+                xmlhttp.open("POST", document.getElementById("json").value);
+                xmlhttp.send();
+            }
+            catch(err) {
+            document.getElementById("students").innerHTML = err.message;
+            console.log("fail");
+            return;
+            }
+            
+        }
+    </script>
+</body>
+</html>
