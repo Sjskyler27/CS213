@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap');
+.document{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#house1{
+    width: 100%;
+    height: auto;
+    max-height: 680px;
+    flex: 30%;
+    margin-top: 0;
+}
+#house2{
+    width: 100%;
+    height: auto;
+    max-height: 680px;
+    flex:30%;
+}
+img{
+    width: 100%;
+    margin-top: 0;
+}
+#UI{
+    width: 400px;
+    flex: 40%;
+    background-color: #e5e7ef;
+    padding: 10px;
+    border: 10px solid #4c7287;
+    border-radius: 5px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 52px;
+}
+
+#UI form{
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+#grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#grid .float{
+    text-align:right;
+}
+#grid input{
+    float: right;
+}
+
+#UI p{
+    color: red;
+    font-size: small;
+}
+h1{
+    background-color: #e5e7ef;
+    border: solid 10px  #4c7287;
+    border-radius: 5px;
+    text-align: center;
+}
+h2{
+    font-family: 'Oswald', sans-serif;
+    color: #ac3d3f;
+    font-size: 30px;
+}
+.background {
+    display: none;
+}
+@media (max-width: 1100px) {
+    
+    #house1{
+        display: none;
+    }
+    #house2{
+        display: none;
+    }
+    .document{
+        display: block;
+    }
+    #UI{
+        width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    body{
+        background-image: url('house1.jpg');
+        background-size: 100%;
+    }
+}
+@media (max-width: 700px) {
+    #grid{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #grid .float{
+        text-align:center;
+    }
+    #grid input{
+        float: center;
+    }
+    #UI{
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #UI form{
+        width:200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 20px;
+    }
+    h2{
+        font-size: 22px;
+        color: #fe9201;
+    }
+    body{
+        background-image: url('house1.jpg');
+        background-size: 700px;
+    }
+    .parallax {
+        height: 500px; /* fallback for older browsers */
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-perspective: 300px;
+        perspective: 300px;
+      }
+    
+      .parallax__group {
+        position: relative;
+        height: 500px; /* fallback for older browsers */
+        height: 100vh;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+    
+      .parallax__layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .parallax__layer--base {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        z-index: 4;
+      }
+    
+      .parallax__layer--back {
+        -webkit-transform: translateZ(-300px) scale(2);
+        transform: translateZ(-300px) scale(2);
+        z-index: 3;
+      }
+      .parallax__layer {
+        padding-top: 10vh 0;
+        padding-bottom: 100vh 0;
+      }
+      .fore {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: fuchsia;
+      }
+      .background {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width:100%;
+      }
+    
+}
